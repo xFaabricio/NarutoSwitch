@@ -1,0 +1,113 @@
+:root {
+    --left-600px: 92%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+}
+
+label {
+    position: relative;
+    width: 480px;
+    height: 180px;
+    display: block;
+    background: url(images/naruto-loop-espelhado.gif);
+    background-size: cover;
+    background-position: center;
+    border: 10px solid rgba(198, 247, 253, 0.3);
+    cursor: pointer;
+    transition: 1s ease;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+    border-radius: 180px;
+    box-sizing: border-box;
+}
+
+label::after {
+    content: '';
+    position: absolute;
+    height: 110px;
+    width: 110px;
+    background: #f2f2f2;
+    border-radius: 50%;
+    top: 25px;
+    left: 30px;
+    transition: 0.8s ease;
+    box-shadow:  0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+label::before {
+    content: '';
+    position: absolute;
+    height: 110px;
+    width: 110px;    
+    border-radius: 50%;
+    border: 10px solid rgba(198, 247, 253, 0.3);
+    top: 15px;
+    left: 20px;
+    transition: 0.8s ease;
+    box-shadow:  0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.background {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background: rgb(255 143 1);
+    z-index: -1;
+    transition: all 1s ease;
+}
+
+input:checked ~ label::after {
+    left:  430px;
+    transform: translateX(-100%);
+    background: #777ba5;    
+}
+
+input:checked ~ label::before {
+    left: 440px;
+    border: 10px solid rgba(90, 79, 136, 0.2);
+    transform: translateX(-100%);
+}
+
+input:checked ~ label {
+    background: url(images/sasuke-loop.gif);
+    background-size: cover;
+    background-position: center;
+    border: 10px solid rgba(90, 79, 136, 0.2)
+}
+
+input:checked ~ .background {
+    background: rgb(36 25 122);
+}
+
+input {
+    display: none;
+}
+
+@media screen and (max-width: 600px) {
+    label {
+        width: 90%;
+    }
+    input:checked ~ label::after {
+        left:  var(--left-600px);        
+    }
+    
+    input:checked ~ label::before {
+        left: calc(var(--left-600px) + 10px);
+    }
+}
