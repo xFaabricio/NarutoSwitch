@@ -1,14 +1,14 @@
-# Toogle Switch Dark Mode
+# Toogle Switch Naruto
 
 ## Estilização input checkbox
 
 GIF da demonstração:
 
-![ ](https://raw.githubusercontent.com/xFaabricio/DarkLightSwitch/main/demo.gif)
+![ ](https://raw.githubusercontent.com/xFaabricio/NarutoSwitch/main/naruto-toggle.gif)
 
 ### Demo
 
-[Demonstração](https://dark-light-switch.vercel.app/)
+[Demonstração](https://naruto-switch.vercel.app/)
 
 ### Contato
 
